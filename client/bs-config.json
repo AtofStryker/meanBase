@@ -1,0 +1,11 @@
+{
+  "port": 8000,  
+  "notify": false,
+  "bind": "localhost",
+  "server": {
+    "baseDir": "src",
+    "routes": {
+      "/node_modules": "node_modules"
+    }
+  }
+}

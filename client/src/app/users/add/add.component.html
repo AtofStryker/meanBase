@@ -1,0 +1,31 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="form-group">
+    <label for="{{firstNameFieldDisplay}}">{{firstNameFieldDisplay}}</label>
+    <input class="form-control" formControlName="firstName" placeholder="{{firstNameFieldDisplayPlaceHolder}}">
+    <div *ngIf="formErrors.firstName" class="alert alert-danger">
+      {{ formErrors.firstName }}
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="{{lastNameFieldDisplay}}">{{lastNameFieldDisplay}}</label>
+    <input class="form-control" formControlName="lastName" placeholder="{{lastNameFieldDisplayPlaceHolder}}">
+    <div *ngIf="formErrors.lastName" class="alert alert-danger">
+      {{ formErrors.lastName }}
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="{{addressFieldDisplay}}">{{addressFieldDisplay}}</label>
+    <input class="form-control" formControlName="address" placeholder="{{addressFieldDisplayPlaceHolder}}">
+    <div *ngIf="formErrors.address" class="alert alert-danger">
+      {{ formErrors.address }}
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="{{companyFieldDisplay}}">{{companyFieldDisplay}}</label>
+    <input class="form-control" formControlName="company" placeholder="{{companyFieldDisplayPlaceHolder}}">
+  </div>
+   <div *ngIf="formErrors.company" class="alert alert-danger">
+      {{ formErrors.company }}
+    </div>
+  <button [disabled]="!userForm.valid" type="submit" class="btn btn-primary">Submit</button>
+</form>
