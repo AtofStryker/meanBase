@@ -27,5 +27,5 @@
    <div *ngIf="formErrors.company" class="alert alert-danger">
       {{ formErrors.company }}
     </div>
-  <button [disabled]="!userForm.valid" type="submit" class="btn btn-primary">Submit</button>
+  <button id="addUserSubmit" [disabled]="!userForm.valid" type="submit" class="btn btn-primary">Submit</button>
 </form>

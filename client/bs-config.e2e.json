@@ -1,7 +1,7 @@
 {
   "open": false,
   "logLevel": "silent",
-  "port": 8001,  
+  "port": 8005,  
   "bind": "localhost",
   "server": {
     "baseDir": "src",
